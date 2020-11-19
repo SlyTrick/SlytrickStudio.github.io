@@ -6270,6 +6270,10 @@ button.bg-dark:focus {
   background-color: #000000 !important;
 }
 
+.bg-azulMarino {
+  background-color: #152e41 !important;
+}
+
 a.bg-black:hover, a.bg-black:focus,
 button.bg-black:hover,
 button.bg-black:focus {
