@@ -29,6 +29,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About us</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -52,18 +53,19 @@
                         <h2 class="text-white mb-4">Slytrick Studio</h2>
                         <p class="text-white-50">
                             Slytrick Studio is an indie videogame company created in 2020. We are based as a flexible studio and specialized in making 
-                            frenetic games with cool art and fluid movements. Currently, we are working on "Dielivery", a time-attack 2D game for web browsers.
+                            frenetic games with cool art and fluid movements. Currently working on "Project Birbs", a multiplayer 3D game for web browsers.
                         </p>
+                        <a class="btn btn-secondary js-scroll-trigger" href="https://slytrick-studio.itch.io/">Play our games for free</a>
                     </div>
                 </div>
                 <img class="img-fluid" src="assets/img/logoSlytrick.png" alt="" />
             </div>
         </section>
         <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+        <section class="projects-section bg-light bg-projects" id="projects">
             <div class="container">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="text-black mb-4">Our Projects</h2>
+                    <h2 class="text-white mb-4" style="text-align: center;">Our Projects</h2>
                 </div>
                 <!--Project Selector-->
                 <div class="slider-projects">
@@ -83,8 +85,8 @@
                         <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/logoDielivery.png" alt="" /></div>
                         <div class="col-xl-4 col-lg-5">
                             <div class="featured-text text-center text-lg-left">
-                                <h4>Dielivery</h4>
-                                <p class="text-black-50 mb-0">A spooky and cute game where you can make people happy in the afterlife and become the employee of the month</p>
+                                <h4 style="color: rgb(255, 255, 255);">Dielivery</h4>
+                                <p class="mb-0" style="color: white;">A spooky and cute game where you can make people happy in the afterlife and become the employee of the month</p>
                             </div>
                         </div>
                     </div>
@@ -155,8 +157,67 @@
                 </div>
 
                 <!--SLIDER Birbs-->
-                <div id="b2" class="containerTab" style="display:none;background:red">
+                <div id="b2" class="containerTab" style="display: none;">
                     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <!-- Featured Project Row-->
+                    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                        <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/logoDielivery.png" alt="" /></div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="featured-text text-center text-lg-left">
+                                <h4 style="color: rgb(65, 65, 65); color: white;">Project Birbs</h4>
+                                <p class="mb-0" style="color: white;">A spooky and cute game where you can make people happy in the afterlife and become the employee of the month</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-birbs">
+                        <img src="assets/birbs/Apsteryx.png" alt="Avatar" style="width:100%">
+                        <div class="card-description">
+                          <h4><b>Apsteryx</b></h4> 
+                          <p>dfgdfg</p> 
+                        </div>
+                      </div>
+                      
+                      <div class="card-birbs">
+                        <img src="assets/birbs/Coronel Columba.png" alt="Avatar" style="width:100%">
+                        <div class="card-description">
+                          <h4><b>Coronel Columba</b></h4> 
+                          <p>dfgdf</p> 
+                        </div>
+                      </div>
+                      
+                      <div class="card-birbs">
+                        <img src="assets/birbs/Corvin.jpg" alt="Avatar" style="width:100%">
+                        <div class="card-description">
+                          <h4><b>Corvin</b></h4> 
+                          <p>fgdfgdf</p> 
+                        </div>
+                      </div>
+
+                      <div class="card-birbs">
+                        <img src="assets/birbs/Doctor Platyrrhynski.png" alt="Avatar" style="width:100%">
+                        <div class="card-description">
+                          <h4><b>Doctor Platyrrhynski</b></h4> 
+                          <p>dfgdf</p> 
+                        </div>
+                      </div>
+                      
+                      <div class="card-birbs">
+                        <img src="assets/birbs/Dori.png" alt="Avatar" style="width:100%">
+                        <div class="card-description">
+                          <h4><b>Dori</b></h4> 
+                          <p>fgdfgdf</p> 
+                        </div>
+                      </div>
+
+                      <div class="card-birbs">
+                        <img src="assets/birbs/classified.png" alt="Avatar" style="width:100%; height: 100%;">
+                        <div class="card-description">
+                          <h4><b>Classified</b></h4> 
+                          <p>Coming Soon...</p> 
+                        </div>
+                      </div>
+
                 </div>
                 
             </div>
@@ -164,18 +225,93 @@
                 function openTab(tabName) {
                   var i, x;
                   var display = document.getElementById(tabName).style.display;
+                  var bg = document.getElementById("projects");
+                  console.log(bg);
                   x = document.getElementsByClassName("containerTab");
                   for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                   }
-                  if( display === "block"){
-                    document.getElementById(tabName).style.display = "none";
-                  }else{
-                    document.getElementById(tabName).style.display = "block";
+                  if(tabName === 'b1'){
+                    bg.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url(assets/img/imprenta.jpg)";
                   }
+                  if(tabName === 'b2'){
+                    //bg.style.backgroundImage = "url(assets/birbs/base-background.jpg)";
+                    bg.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url(assets/birbs/base-background.jpg)";
+                }
+                  //if( display === "block"){
+                  //  document.getElementById(tabName).style.display = "none";
+                  //}else{
+                    document.getElementById(tabName).style.display = "block";
+                  //}
                   
                 }
-                </script>
+            </script>
+        </section>
+
+        <!--Team section-->
+        <section class="team-section" id="team"  style="background: black;">
+            <div class="container">
+                <div class="containerTab-team">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="mb-4" style="text-align: center; color:#cccccc;">Our Team</h2>
+                    </div>
+                    <div class="card-birbs-team">
+                        <img src="assets/birbs/Apsteryx.png" alt="Avatar" style="width:100%">
+                        <div class="card-description-team">
+                          <h4><b>Fernando Doménech</b></h4> 
+                          <p>Developer</p> 
+                          <a class="tw-team" href="https://twitter.com/m_ferdom">@m_ferdom</a>
+                        </div>
+                      </div>
+                      
+                      <div class="card-birbs-team">
+                        <img src="assets/birbs/Coronel Columba.png" alt="Avatar" style="width:100%">
+                        <div class="card-description-team">
+                            <h4><b>Raúl Hernández</b></h4> 
+                            <p>Developer</p>
+                            <a class="tw-team" href="https://twitter.com/raul_yebenes3">@raul_yebenes3</a>
+                        </div>
+                      </div>
+                      
+                      <div class="card-birbs-team">
+                        <img src="assets/birbs/Dori.png" alt="Avatar" style="width:100%">
+                        <div class="card-description-team">
+                          <h4><b>Ignacio Esteban</b></h4> 
+                          <p>Developer</p>
+                          <a style="color: #152e41">.</a>
+                        </div>
+                      </div>
+
+                      <div class="card-birbs-team">
+                        <img src="assets/birbs/Corvin.jpg" alt="Avatar" style="width:100%">
+                        <div class="card-description-team">
+                          <h4><b>Elena Rosal</b></h4> 
+                          <p>2D Artist</p> 
+                          <a class="tw-team" href="https://twitter.com/nouconcept">@nouconcept</a>
+                        </div>
+                      </div>
+
+                      <div class="card-birbs-team">
+                        <img src="assets/birbs/Doctor Platyrrhynski.png" alt="Avatar" style="width:100%">
+                        <div class="card-description-team">
+                          <h4><b>Angel Serradilla</b></h4> 
+                          <p>3D Artist</p>
+                          <a class="tw-team" href="https://twitter.com/angelserra_">@angelserra_</a>
+                        </div>
+                      </div>
+                      
+
+                      <div class="card-birbs-team">
+                        <img src="assets/birbs/classified.png" alt="Avatar" style="width:100%; height: 100%;">
+                        <div class="card-description-team">
+                            <h4><b>David Martínez</b></h4> 
+                            <p>2D Artist</p>
+                            <a class="tw-team" href="https://twitter.com/dvd_arts">@dvd_arts</a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
         </section>
         <!-- Signup
         <section class="signup-section" id="signup">

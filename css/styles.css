@@ -10255,7 +10255,7 @@ body {
 
 .about-section {
   padding-top: 10rem;
-  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.95) 100%), linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0.95) 100%);
 }
 .about-section p {
   margin-bottom: 5rem;
@@ -10290,7 +10290,7 @@ body {
 
 .signup-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/invernadero.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%),url("../assets/img/invernadero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10389,6 +10389,12 @@ body {
   color: white;
 }
 
+.containerTab-team {
+  padding: 20px;
+  padding-bottom: 50px;
+  color: white;
+}
+
 /* Clear floats after the columns */
 
 .slider-projects:after {
@@ -10403,4 +10409,118 @@ body {
   color: #ccc;
   font-size: 35px;
   cursor: pointer;
+}
+
+.character-image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  width: 33%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1f5f19;
+}
+
+
+.character-image:hover .overlay {
+  z-index: -5;
+  opacity: 0.5;
+}
+
+.text-character {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-birbs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(37, 37, 37);
+  /*background-clip: border-box;*/
+  margin-bottom: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.125);
+  /*border-radius: 0.25rem;*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 33%;
+  display: inline-block;
+}
+.card-birbs-team {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgb(255, 255, 255);
+  /*background-clip: border-box;*/
+  margin-bottom: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.125);
+  /*border-radius: 0.25rem;*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 33%;
+  display: inline-block;
+}
+
+.card-birbs:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-description {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 16px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: rgb(37, 37, 37);
+  /*background-image: url(../assets/birbs/base-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;*/
+}
+
+.card-description-team {
+  color: #cccccc;
+  text-align: center;
+  padding: 10px 16px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: #152e41;
+  /*background-image: url(../assets/birbs/base-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;*/
+}
+
+.bg-projects{
+  /*background-image: url(../assets/birbs/base-background.jpg);*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%),url(../assets/img/imprenta.jpg);
+}
+
+.tw-team{
+  color: #ccc;
 }
