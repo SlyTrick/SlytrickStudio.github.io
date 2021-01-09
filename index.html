@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="assets/img/logoSlytrick.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
@@ -64,81 +65,117 @@
                 <div class="col-lg-8 mx-auto">
                     <h2 class="text-black mb-4">Our Projects</h2>
                 </div>
-                <!-- Featured Project Row-->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/logoDielivery.png" alt="" /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Dielivery</h4>
-                            <p class="text-black-50 mb-0">A spooky and cute game where you can make people happy in the afterlife and become the employee of the month</p>
+                <!--Project Selector-->
+                <div class="slider-projects">
+                    <div class="project-mini" id="pm-dielivery" onclick="openTab('b1');">
+                        <p>DIELIVERY</p>
+                    </div>
+                    <div class="project-mini" id="pm-birbs" onclick="openTab('b2');">
+                        <p>PROJECT BIRBS</p>
+                    </div>
+
+                </div>
+                <!--SLIDER DIELIVERY-->
+                <div id="b1" class="containerTab">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                    <!-- Featured Project Row-->
+                    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                        <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/logoDielivery.png" alt="" /></div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="featured-text text-center text-lg-left">
+                                <h4>Dielivery</h4>
+                                <p class="text-black-50 mb-0">A spooky and cute game where you can make people happy in the afterlife and become the employee of the month</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Project One Row-->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/Grimmy.jpg" alt="" /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-azulMarino text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Meet the main character</h4>
-                                    <p class="mb-0 text-white-50">Get in the "bones" of Grimmy, the worker for a delivery company called Dielivery.</p>
-                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                    <!-- Project One Row-->
+                    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/Grimmy.jpg" alt="" /></div>
+                        <div class="col-lg-6">
+                            <div class="bg-azulMarino text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                                        <h4 class="text-white">Meet the main character</h4>
+                                        <p class="mb-0 text-white-50">Get in the "bones" of Grimmy, the worker for a delivery company called Dielivery.</p>
+                                        <hr class="d-none d-lg-block mb-0 ml-0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Two Row-->
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/escenario.jpg" alt="" /></div>
+                        <div class="col-lg-6 order-lg-first">
+                            <div class="bg-azulMarino text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-right">
+                                        <h4 class="text-white">Frenetic and quick</h4>
+                                        <p class="mb-0 text-white-50">In Dielivery, the goal is to create packages containing all of the offerings the dead recieve on Earth 
+                                            and send them to their reciever. In order to do that, you must hone your parkour skills and find out the best routes to get the offerings you need</p>
+                                        <hr class="d-none d-lg-block mb-0 mr-0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Three Row-->
+                    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/dielivery_logo.jpg" alt="" /></div>
+                        <div class="col-lg-6">
+                            <div class="bg-azulMarino text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                                        <h4 class="text-white">Become the employee of the month</h4>
+                                        <p class="mb-0 text-white-50">Explore all the different maps and warehouses of Dielivery and try to get the best score by delivering as many 
+                                            packages as you can within the time given, to ultimately become the employee of the month</p>
+                                        <hr class="d-none d-lg-block mb-0 ml-0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Four Row-->
+                    <div class="row justify-content-center no-gutters">
+                        <div class="col-lg-6"><img class="img-fluid" src="assets/img/tarjeta.JPG" alt="" /></div>
+                        <div class="col-lg-6 order-lg-first">
+                            <div class="bg-azulMarino text-center h-100 project">
+                                <div class="d-flex h-100">
+                                    <div class="project-text w-100 my-auto text-center text-lg-right">
+                                        <h4 class="text-white">Appear in the game!</h4>
+                                        <p class="mb-0 text-white-50">Make your appearance in Dielivery in the shape of one of the dead that make requests to Grimmy, simply
+                                            interact with <a href="https://twitter.com/SlytrickStudio/status/1322493288440565760" target="_blank">this tweet</a> and comment the way 
+                                            you think you would die. Your name, profile picture, and the death reason will have a chance to be one of Grimmy's orders </p>
+                                        <hr class="d-none d-lg-block mb-0 mr-0" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project Two Row-->
-                <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/escenario.jpg" alt="" /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-azulMarino text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Frenetic and quick</h4>
-                                    <p class="mb-0 text-white-50">In Dielivery, the goal is to create packages containing all of the offerings the dead recieve on Earth 
-                                        and send them to their reciever. In order to do that, you must hone your parkour skills and find out the best routes to get the offerings you need</p>
-                                    <hr class="d-none d-lg-block mb-0 mr-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <!--SLIDER Birbs-->
+                <div id="b2" class="containerTab" style="display:none;background:red">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 </div>
-                <!-- Project Three Row-->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/dielivery_logo.jpg" alt="" /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-azulMarino text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Become the employee of the month</h4>
-                                    <p class="mb-0 text-white-50">Explore all the different maps and warehouses of Dielivery and try to get the best score by delivering as many 
-                                        packages as you can within the time given, to ultimately become the employee of the month</p>
-                                    <hr class="d-none d-lg-block mb-0 ml-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Four Row-->
-                <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/tarjeta.JPG" alt="" /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-azulMarino text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Appear in the game!</h4>
-                                    <p class="mb-0 text-white-50">Make your appearance in Dielivery in the shape of one of the dead that make requests to Grimmy, simply
-                                        interact with <a href="https://twitter.com/SlytrickStudio/status/1322493288440565760" target="_blank">this tweet</a> and comment the way 
-                                        you think you would die. Your name, profile picture, and the death reason will have a chance to be one of Grimmy's orders </p>
-                                    <hr class="d-none d-lg-block mb-0 mr-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
+            <script>
+                function openTab(tabName) {
+                  var i, x;
+                  var display = document.getElementById(tabName).style.display;
+                  x = document.getElementsByClassName("containerTab");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                  }
+                  if( display === "block"){
+                    document.getElementById(tabName).style.display = "none";
+                  }else{
+                    document.getElementById(tabName).style.display = "block";
+                  }
+                  
+                }
+                </script>
         </section>
         <!-- Signup
         <section class="signup-section" id="signup">
