@@ -10375,7 +10375,9 @@ body {
   transition: all 500ms;
 }
 
-
+.salto{
+  display: none;
+}
 
 #pm-birbs{
   background-image: url("../assets/img/escenario.jpg");
@@ -10493,7 +10495,6 @@ body {
 .card-description {
   color: #ffffff;
   text-align: center;
-  padding: 10px 16px;
   padding-top: 30px;
   padding-bottom: 10px;
   background-color: rgb(37, 37, 37);
@@ -10505,7 +10506,6 @@ body {
 .card-description-team {
   color: #cccccc;
   text-align: center;
-  padding: 10px 16px;
   padding-top: 30px;
   padding-bottom: 10px;
   background-color: #152e41;
@@ -10513,6 +10513,74 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;*/
 }
+
+.salto{
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .card-description, .card-description-team {
+    font-size: 20px;
+  }
+
+  .title-card-team, .card-birbs{
+    font-size: 100%;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1280px) {
+  .card-birbs, .card-birbs-team{
+    width: 30%;
+  }
+  .card-description, .card-description-team {
+    align-content: justify;
+    font-size: 80%;
+  }
+
+  .title-card-team, .card-birbs{
+    font-size: 100%;
+  }
+
+
+  .subtitle-card-team{
+    font-size: 90%;
+  }
+
+  .tw-team{
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .salto{
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 364px) {
+  .card-birbs, .card-birbs-team{
+    width: 30%;
+  }
+  .card-description, .card-description-team {
+    align-content: justify;
+    font-size: 80%;
+  }
+
+  .title-card-team, .card-birbs{
+    font-size: 90%;
+  }
+
+  .subtitle-card-team{
+    font-size: 90%;
+  }
+
+  .tw-team{
+    font-size: 65%;
+  }
+}
+
 
 .bg-projects{
   /*background-image: url(../assets/birbs/base-background.jpg);*/
